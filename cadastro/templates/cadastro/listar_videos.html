@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Vídeos</title>
+</head>
+<body>
+    <h1>Lista de Vídeos</h1>
+    <a href="/">Voltar ao início</a> | <a href="/videos/criar/">Criar Vídeo</a>
+    <ul>
+        {% for video in videos %}
+            <li>
+                <strong>{{ video.titulo }}</strong> ({{ video.categoria.nome }})<br>
+                {{ video.descricao }}<br>
+                <a href="/videos/editar/{{ video.id }}/">Editar</a> 
+                <a href="/videos/excluir/{{ video.id }}/">Excluir</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

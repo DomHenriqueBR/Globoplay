@@ -1,0 +1,10 @@
+<h1>Lista de Categorias</h1>
+<a href="/">Voltar ao início</a> | <a href="/categorias/criar/">Criar Categoria</a>
+<ul>
+    {% for categoria in categorias %}
+        <li>{{ categoria.nome }} 
+            <a href="/categorias/editar/{{ categoria.id }}/">Editar</a> 
+            <a href="/categorias/excluir/{{ categoria.id }}/">Excluir</a>
+        </li>
+    {% endfor %}
+</ul>
